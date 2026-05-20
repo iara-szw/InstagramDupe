@@ -1,0 +1,36 @@
+.barra-horizontal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 14px 12px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  margin-bottom: 5px;
+}
+
+.barra-horizontal:hover {
+  background-color: #f2f2f2;
+}
+
+.icono {
+  width: 26px;
+  height: 26px;
+
+  object-fit: contain;
+}
+
+.barra-horizontal h3 {
+  font-size: 16px;
+
+  font-weight: 400;
+
+  margin: 0;
+}

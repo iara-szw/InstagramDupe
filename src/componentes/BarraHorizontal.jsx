@@ -1,11 +1,19 @@
-function BarraHorizontal({img,nombre,texto }){
-    return (<>
-    <div id="barra">
-        <img src={img}></img>
-        <h5>{nombre}</h5>
-        {texto && <p>{texto}</p>}
+import "./BarraHorizontal.css";
+
+function BarraHorizontal({ icono, nombre, texto }) {
+  return (
+    <div className="barra-horizontal">
+      <img
+        className="icono"
+        src={icono}
+        alt={nombre}
+      />
+
+      <h3>{nombre}</h3>
+
+      {texto && <p>{texto}</p>}
     </div>
-    
-    </>)
+  );
 }
-export default BarraHorizontal
+
+export default BarraHorizontal;

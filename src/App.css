@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.layout {
+  display: flex;
+}
+
+#sidebar{
+  width: 240px;
+  height: 100vh;
+
+  border-right: 1px solid #dbdbdb;
+
+  padding: 20px 12px;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: white;
+}
+#logo {
+width:10%;
+}
+
+body {
+  margin: 0;
+
+  background-color: #fafafa;
+
+  font-family: Arial, sans-serif;
+}

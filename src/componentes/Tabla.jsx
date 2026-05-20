@@ -1,5 +1,7 @@
+
+import './Tabla.css'
 import  BarraHorizontal from './BarraHorizontal'
-function Tabla({ filas }) {
+function Tabla({ filas =[]}) {
   return (
     <>
         <div id="tabla">
@@ -7,7 +9,7 @@ function Tabla({ filas }) {
      {filas.map((fila) => (
         <BarraHorizontal
           key={fila.id}
-          img={fila.img}
+          icono={fila.icono}
           nombre={fila.nombre}
           texto={fila.texto}
         />

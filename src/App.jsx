@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import './App.css'
+import Feed from './componentes/Feed'
 import menu from './assets/menu'
 import { ObtenerImagenes } from "./services/CatAPI";
 import Tabla from './componentes/Tabla'
+import logo from './assets/logo.png'
+
 function App() {
   const [posts, setPosts] = useState([]);
 useEffect(() => {
@@ -15,7 +18,6 @@ useEffect(() => {
       username: `cat_user_${index}`,
       likes: Math.floor(Math.random() * 1000)
     }));
-
     setPosts(formattedPosts);
   };
 
@@ -25,8 +27,9 @@ const [postActual,SetPost]= useState();
   return (
 
 <>
-<Tabla filas={menu}></Tabla>
-
+<img id="logo" src={logo}></img>
+<Tabla id="sidebar" filas={menu}></Tabla>
+  <Feed posts={posts}></Feed>
 
 </>
 

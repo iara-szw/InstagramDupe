@@ -1,43 +1,52 @@
+import home from "./sidebar/home.png";
+import search from "./sidebar/buscar.png";
+import explore from "./sidebar/explorar.png";
+import reels from "./sidebar/reels.png";
+import messages from "./sidebar/DM.png";
+import notifications from "./sidebar/corazon.png";
+import create from "./sidebar/subir.png";
+import profile from "./sidebar/perfil.png";
+
 const menu = [
   {
     id: 1,
     nombre: "Home",
-    icono: "🏠",
+    icono: home,
   },
   {
     id: 2,
     nombre: "Search",
-    icono: "🔍",
+    icono: search,
   },
   {
     id: 3,
     nombre: "Explore",
-    icono: "🧭",
+    icono: explore,
   },
   {
     id: 4,
     nombre: "Reels",
-    icono: "🎬",
+    icono: reels,
   },
   {
     id: 5,
     nombre: "Messages",
-    icono: "💬",
+    icono: messages,
   },
   {
     id: 6,
     nombre: "Notifications",
-    icono: "❤️",
+    icono: notifications,
   },
   {
     id: 7,
     nombre: "Create",
-    icono: "➕",
+    icono: create,
   },
   {
     id: 8,
     nombre: "Profile",
-    icono: "👤",
+    icono: profile,
   },
 ];
 

@@ -6,6 +6,13 @@
   padding-bottom: 20px;
 }
 
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
 .post-header {
   display: flex;
 

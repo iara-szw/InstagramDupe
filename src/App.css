@@ -8,28 +8,25 @@ body {
   display: flex;
 }
 
-#sidebar{
+#sidebar {
   width: 240px;
   height: 100vh;
-
   border-right: 1px solid #dbdbdb;
-
   padding: 20px 12px;
-
   position: fixed;
   left: 0;
   top: 0;
-
   background: white;
 }
+
 #logo {
-width:10%;
+  width: 10%;
 }
 
-body {
-  margin: 0;
-
-  background-color: #fafafa;
-
-  font-family: Arial, sans-serif;
+.main-content {
+  margin-left: 320px;       
+  margin-right: 360px;      
+  padding-top: 30px;
+  max-width: 614px;
+  width: 100%;
 }

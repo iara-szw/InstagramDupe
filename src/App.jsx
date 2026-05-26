@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import './App.css'
-import Feed from './componentes/Feed'
-import menu from './assets/menu'
+import './App.css';
+import Feed from './componentes/Feed';
+import Stories from './componentes/Stories.jsx';
+
+import RightSidebar from './componentes/RightSidebar';
+import Tabla from './componentes/Tabla';
+import menu from './assets/menu';
 import { ObtenerImagenes } from "./services/CatAPI";
-import Tabla from './componentes/Tabla'
-import logo from './assets/logo.png'
+import logo from './assets/logo.png';
 
 function App() {
   const [posts, setPosts] = useState([]);
-useEffect(() => {
+
+ useEffect(() => {
   const fetchCats = async () => {
     const data = await ObtenerImagenes();
 
@@ -22,18 +26,18 @@ useEffect(() => {
   };
 
   fetchCats();
-}, []);
-const [postActual,SetPost]= useState();
+  }, []);
+
   return (
-
-<>
-<img id="logo" src={logo}></img>
-<Tabla id="sidebar" filas={menu}></Tabla>
-  <Feed posts={posts}></Feed>
-
-</>
-
-)
+    <>
+      <Tabla id="sidebar" filas={menu} ></Tabla>
+      <div className="main-content">
+        <Stories posts={posts}></Stories>
+        <Feed posts={posts}></Feed>
+      </div>
+      <RightSidebar posts={posts}></RightSidebar>
+    </>
+  );
 }
 
-export default App
+export default App;

@@ -1,23 +1,23 @@
+import './Tabla.css';
+import BarraHorizontal from './BarraHorizontal';
 
-import './Tabla.css'
-import  BarraHorizontal from './BarraHorizontal'
-function Tabla({ filas =[]}) {
+function Tabla({ filas = [], onNavigate }) {
   return (
-    <>
-        <div id="tabla">
-
-     {filas.map((fila) => (
-        <BarraHorizontal
-          key={fila.id}
-          icono={fila.icono}
-          nombre={fila.nombre}
-          texto={fila.texto}
-        />
+    <div id="tabla">
+      {filas.map((fila) => (
+        <div key={fila.id} onClick={() => {
+          if (fila.nombre === "Profile") onNavigate("profile");
+          else onNavigate("feed");
+        }}>
+          <BarraHorizontal
+            icono={fila.icono}
+            nombre={fila.nombre}
+            texto={fila.texto}
+          />
+        </div>
       ))}
-      </div>
-</>
-     
-  )
+    </div>
+  );
 }
-export default Tabla;
 
+export default Tabla;

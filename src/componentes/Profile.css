@@ -1,0 +1,200 @@
+.profile-page {
+  width: 100%;
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  margin-bottom: 44px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  display: block;
+}
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.profile-top-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-handle {
+  font-size: 20px;
+  font-weight: 300;
+  color: #262626;
+  margin: 0;
+}
+
+.btn-edit {
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-edit:hover {
+  background: #f2f2f2;
+}
+
+.btn-settings {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #262626;
+  padding: 0;
+  display: flex;
+  align-items: center;
+    font-size: smaller;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 40px;
+  font-size: 16px;
+  color: #262626;
+}
+
+.profile-stats span {
+  cursor: pointer;
+}
+
+.profile-stats strong {
+  font-weight: 600;
+}
+
+/* Bio */
+.profile-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-fullname {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+  margin: 0;
+}
+
+.profile-bio-text {
+  font-size: 14px;
+  color: #262626;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.profile-website {
+  font-size: 14px;
+  color: #00376b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-website:hover {
+  text-decoration: underline;
+}
+
+/* â”€â”€ Tabs â”€â”€ */
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-top: 1px solid #dbdbdb;
+  margin-bottom: 4px;
+}
+
+.profile-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 40px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #8e8e8e;
+  background: none;
+  border: none;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.profile-tab--active {
+  color: #262626;
+  border-top-color: #262626;
+  margin-top: -1px;
+}
+
+.profile-tab:hover {
+  color: #262626;
+}
+
+/* â”€â”€ Grid â”€â”€ */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.profile-grid-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  background: #efefef;
+}
+
+.profile-grid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s;
+}
+
+.profile-grid-item:hover .profile-grid-img {
+  transform: scale(1.04);
+}
+
+.profile-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.profile-grid-item:hover .profile-grid-overlay {
+  opacity: 1;
+}

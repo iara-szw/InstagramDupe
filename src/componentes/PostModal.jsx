@@ -101,7 +101,7 @@ function PostModal({ post, onClose }) {
           <div className="modal-likes-info">
             <p className="modal-liked-by">
               Liked by <strong>Cat</strong> and{" "}
-              <strong>{post.likes.toLocaleString()} others</strong>
+              <strong>{post.likes.toLocaleString()-1} others</strong>
             </p>
             <p className="modal-timestamp">Hace 3 dias</p>
           </div>

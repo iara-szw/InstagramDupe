@@ -9,16 +9,13 @@ function RightSidebar({ posts = [] }) {
   return (
     <div className="right-sidebar">
       <div className="user-profile">
-        <div className="profile-avatar-ring">
           <img
             className="profile-avatar"
             src={currentUser.image}
             alt={currentUser.username}
           />
-        </div>
         <div className="profile-info">
           <span className="profile-username">{currentUser.username}</span>
-          <span className="profile-name">Upvox</span>
         </div>
         <button className="switch-btn">Switch</button>
       </div>

@@ -23,7 +23,7 @@
 .icono {
   width: 26px;
   height: 26px;
-
+border-radius:15px;
   object-fit: contain;
 }
 

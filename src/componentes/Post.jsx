@@ -4,7 +4,7 @@ import comentarIMG from "../assets/comentar.png";
 import mensajesIMG from "../assets/mensajes.png";
 import guardarIMG from "../assets/guardar.png";
 
-function Post({ img, user, likes }) {
+function Post({ img, user, likes,onOpenModal,post  }) {
   return (
     <div className="post">
       <div className="post-header">
@@ -26,6 +26,8 @@ function Post({ img, user, likes }) {
         className="post-img"
         src={img}
         alt="post"
+        onClick={() => onOpenModal(post)}
+        style={{ cursor: "pointer" }}
       />
 
       <div className="BarraOpciones">

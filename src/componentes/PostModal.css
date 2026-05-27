@@ -1,0 +1,279 @@
+/* Fondo oscuro */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* BotÃ³n cerrar */
+.modal-close {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1001;
+  line-height: 1;
+}
+
+/* Flechas laterales */
+.modal-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  line-height: 1;
+  padding: 0;
+}
+
+.modal-arrow--left { left: 16px; }
+.modal-arrow--right { right: 16px; }
+
+/* Contenedor principal */
+.modal-container {
+  display: flex;
+  width: 90vw;
+  max-width: 960px;
+  height: 90vh;
+  max-height: 600px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Lado imagen */
+.modal-image-side {
+  flex: 1.2;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Lado info */
+.modal-info-side {
+  width: 340px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dbdbdb;
+}
+
+/* Header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+}
+
+.modal-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #dbdbdb;
+}
+
+.modal-header-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modal-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.modal-location {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.modal-more {
+  font-size: 18px;
+  cursor: pointer;
+  color: #262626;
+}
+
+.modal-divider {
+  height: 1px;
+  background: #dbdbdb;
+}
+
+/* Ãrea de comentarios */
+.modal-comments-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scrollbar-width: thin;
+  scrollbar-color: #dbdbdb transparent;
+}
+
+.modal-comments-area::-webkit-scrollbar {
+  width: 4px;
+}
+.modal-comments-area::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 2px;
+}
+
+/* Comentario individual */
+.modal-comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.modal-comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid #dbdbdb;
+}
+
+.modal-comment-avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #efefef;
+  flex-shrink: 0;
+}
+
+
+.modal-comment-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #262626;
+  margin: 0 0 4px;
+}
+
+.modal-comment-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.modal-comment-like {
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Botones acciÃ³n */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+
+.modal-actions-left {
+  display: flex;
+  gap: 14px;
+}
+
+.modal-action-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.modal-action-icon:hover {
+  transform: scale(1.0.6);
+}
+
+
+/* Likes info */
+.modal-likes-info {
+  padding: 4px 16px 10px;
+}
+
+.modal-liked-by {
+  font-size: 14px;
+  color: #262626;
+  margin: 0 0 4px;
+}
+
+.modal-timestamp {
+  font-size: 10px;
+  color: #8e8e8e;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.modal-add-comment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+}
+
+.modal-emoji-btn {
+  font-size: 22px;
+  cursor: pointer;
+  color: #8e8e8e;
+  flex-shrink: 0;
+}
+
+.modal-comment-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #262626;
+  background: transparent;
+}
+
+.modal-comment-input::placeholder {
+  color: #8e8e8e;
+}
+
+.modal-post-btn {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-post-btn:hover {
+  color: #00376b;
+}
